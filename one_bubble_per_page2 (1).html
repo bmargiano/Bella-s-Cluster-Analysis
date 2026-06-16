@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.plot.ly/plotly-3.3.0.min.js"></script>
+</head>
+<body>
+
+<div style="width:900px; margin:0 auto;">
+  <div id="chart" style="height:600px; width:900px;"></div>
+</div>
+
+<script>
+const data = [
+  {x:[28.33], y:[32.0], mode:'markers+text', name:'AP / bills & vendors (n=273)', text:['AP / bills & vendors'], textposition:'top center', marker:{size:55, color:'#d62728', opacity:0.7}},
+  {x:[8.0], y:[13.0], mode:'markers+text', name:'AR / billing & order entry (n=217)', text:['AR / billing & order entry'], textposition:'top center', marker:{size:48, color:'#1f77b4', opacity:0.7}},
+  {x:[2.0], y:[1.56], mode:'markers+text', name:'Admin & roles (n=118)', text:['Admin & roles'], textposition:'top center', marker:{size:30, color:'#e377c2', opacity:0.7}},
+  {x:[2.0], y:[2.25], mode:'markers+text', name:'Dashboard / power users (n=491)', text:['Dashboard / power users'], textposition:'top center', marker:{size:78, color:'#8c564b', opacity:0.7}},
+  {x:[9.0], y:[9.0], mode:'markers+text', name:'Journal entries & GL (n=251)', text:['Journal entries & GL'], textposition:'top center', marker:{size:52, color:'#2ca02c', opacity:0.7}},
+  {x:[3.38], y:[1.75], mode:'markers+text', name:'Purchasing & POs (n=149)', text:['Purchasing & POs'], textposition:'top center', marker:{size:36, color:'#9467bd', opacity:0.7}},
+  {x:[5.0], y:[5.42], mode:'markers+text', name:'Timesheets & GL (n=316)', text:['Timesheets & GL'], textposition:'top center', marker:{size:60, color:'#ff7f0e', opacity:0.7}}
+];
+
+const layout = {
+  title:'Median Minutes vs. Page Views per Day',
+  xaxis:{title:'Median minutes per day'},
+  yaxis:{title:'Median page views per day'},
+  width:900,
+  height:600,
+  margin:{l:60, r:20, t:60, b:60}
+};
+
+Plotly.newPlot('chart', data, layout);
+</script>
+
+</body>
+</html>
