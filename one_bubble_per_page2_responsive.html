@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.plot.ly/plotly-3.3.0.min.js"></script>
+</head>
+<body style="margin:0;">
+
+<div style="width:100%; max-width:900px; margin:0 auto;">
+  <div id="chart" style="height:600px; width:100%;"></div>
+</div>
+
+<script>
+const data = [
+  {x:[28.33], y:[32.0], mode:'markers+text', name:'AP (273)', text:['AP'], textposition:'top center', marker:{size:40, color:'#d62728'}},
+  {x:[8.0], y:[13.0], mode:'markers+text', name:'AR (217)', text:['AR'], textposition:'top center', marker:{size:35, color:'#1f77b4'}},
+  {x:[2.0], y:[1.56], mode:'markers+text', name:'Admin (118)', text:['Admin'], textposition:'top center', marker:{size:25, color:'#e377c2'}},
+  {x:[2.0], y:[2.25], mode:'markers+text', name:'Dashboard (491)', text:['Dashboard'], textposition:'top center', marker:{size:50, color:'#8c564b'}},
+  {x:[9.0], y:[9.0], mode:'markers+text', name:'Journal (251)', text:['Journal'], textposition:'top center', marker:{size:38, color:'#2ca02c'}},
+  {x:[3.38], y:[1.75], mode:'markers+text', name:'PO (149)', text:['PO'], textposition:'top center', marker:{size:28, color:'#9467bd'}},
+  {x:[5.0], y:[5.42], mode:'markers+text', name:'Timesheets (316)', text:['Timesheets'], textposition:'top center', marker:{size:45, color:'#ff7f0e'}}
+];
+
+const layout = {
+  title: 'Median Minutes vs Page Views',
+  xaxis: { title: 'Minutes/day' },
+  yaxis: { title: 'Page views/day' },
+  height: 600,
+  margin: { l: 50, r: 20, t: 60, b: 100 },
+  legend: {
+    orientation: 'h',
+    y: -0.3
+  }
+};
+
+Plotly.newPlot('chart', data, layout, {responsive:true});
+</script>
+
+</body>
+</html>
